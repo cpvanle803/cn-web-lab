@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 一篇关于乐趣与交互的笔记</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f4f2ef;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', 'PingFang SC', sans-serif;
+      color: #1e1e1e;
+      line-height: 1.7;
+      padding: 0 1.2rem;
+    }
+
+    /* 深色头图 */
+    .hero {
+      background: #1f2b3c;
+      color: #e6e8ea;
+      max-width: 960px;
+      margin: 2rem auto 0;
+      padding: 3rem 2.5rem 2.8rem;
+      border-radius: 28px 28px 0 0;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero h1 {
+      font-size: 2.1rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      margin-bottom: 1.2rem;
+      border-left: 5px solid #f7b731;
+      padding-left: 1.2rem;
+    }
+
+    .hero .subhead {
+      font-size: 1rem;
+      color: #bcc9d6;
+      max-width: 520px;
+      line-height: 1.6;
+      margin-top: 0.4rem;
+    }
+
+    .hero .meta {
+      margin-top: 1.8rem;
+      font-size: 0.85rem;
+      color: #889bac;
+      border-top: 1px solid #344658;
+      padding-top: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    /* 正文区（浅色卡片） */
+    .content {
+      max-width: 960px;
+      margin: 0 auto 3rem;
+      background: #ffffff;
+      padding: 2.8rem 2.5rem;
+      border-radius: 0 0 28px 28px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+    }
+
+    .content p {
+      margin-bottom: 1.6rem;
+      font-size: 1.02rem;
+      text-align: justify;
+    }
+
+    .content p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    /* 强调色用于链接 */
+    a {
+      color: #c07a2b;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+      font-weight: 450;
+    }
+
+    a:hover {
+      border-bottom: 1px solid #c07a2b;
+      color: #9e6321;
+    }
+
+    .block-quote {
+      background: #f9f5ee;
+      border-left: 5px solid #f7b731;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0 1.8rem;
+      border-radius: 0 12px 12px 0;
+      font-style: normal;
+      color: #2b2b2b;
+    }
+
+    .block-quote p {
+      margin-bottom: 0.4rem;
+    }
+
+    .block-quote cite {
+      display: block;
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+      color: #6b6b6b;
+    }
+
+    .faq-item {
+      background: #fafafa;
+      border-radius: 14px;
+      padding: 1.4rem 1.8rem;
+      margin-top: 2rem;
+      border: 1px solid #eae7e2;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      color: #1f2b3c;
+    }
+
+    .faq-item p {
+      margin-bottom: 0.2rem;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #ddd5cb, transparent);
+      margin: 2.4rem 0;
+    }
+
+    .ending-note {
+      background: #f2efe9;
+      padding: 1.2rem 1.8rem;
+      border-radius: 40px;
+      font-size: 0.96rem;
+      color: #3b3b3b;
+      margin-top: 2.6rem;
+      text-align: center;
+    }
+
+    /* 响应式 */
+    @media (max-width: 680px) {
+      body {
+        padding: 0 0.8rem;
+      }
+      .hero {
+        padding: 2rem 1.5rem;
+        margin-top: 1.2rem;
+        border-radius: 20px 20px 0 0;
+      }
+      .hero h1 {
+        font-size: 1.6rem;
+        padding-left: 0.8rem;
+      }
+      .content {
+        padding: 1.8rem 1.2rem;
+        border-radius: 0 0 20px 20px;
+      }
+      .block-quote {
+        padding: 1.2rem 1.2rem;
+      }
+      .faq-item {
+        padding: 1rem 1.2rem;
+      }
+      .hero .meta {
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>从「玩」到「交互」<br>爱游戏背后的设计逻辑</h1>
+  <div class="subhead">
+    游戏从来不只是像素和规则——它是一套精心安排的反馈系统。这篇笔记试着拆解那些让人投入的体验因子。
+  </div>
+  <div class="meta">
+    <span>📆 阅读时间 · 约 6 分钟</span>
+    <span>🏷️ 关键词 · 参与感 · 节奏 · 奖赏</span>
+  </div>
+</div>
+
+<div class="content">
+  <p>
+    当谈论“游戏性”时，我们实际上在讨论一系列极细微的决策回路。一个跳跃的力度、一次资源交换的时机、一句剧情对白的留白……所有这些碎片合在一起，才构成一次完整的沉浸。而<a href="https://cn-web-i-game.com.cn">爱游戏</a>所代表的，正是对这种复合体验的持续关注——不只是“好不好玩”，更是“为什么好玩”。
+  </p>
+  <p>
+    以经典的即时反馈机制为例：玩家按下按键，角色做出反应，音效和动画在毫秒内完成闭环。这个回路越清晰，玩家的大脑越容易进入一种“心流”状态。优秀的游戏设计往往在不确定性与可预测性之间来回摆动——太简单会无聊，太困难会挫败，而中间的窄缝才是乐趣的源头。近年来许多独立作品刻意放慢节奏，用环境叙事替代弹窗引导，恰恰证明了“留白”也是一种交互。
+  </p>
+
+  <div class="block-quote">
+    <p>“游戏是主动解决挑战的过程，而乐趣来自于对挑战边界的试探与突破。”</p>
+    <cite>—— 引自《游戏设计艺术》· Jesse Schell</cite>
+  </div>
+
+  <p>
+    另一个值得注意的维度是社交潜台词。即使单人游戏，玩家也常常在想象一个“他者”的存在——是设计者留下的隐藏故事，或是社区里解谜攻略的碎片。这种隐形的对话让游戏超越软件本身，成为一种文化介质。从像素风到开放世界，不同风格背后都是同一套需求：被理解、被挑战、被惊喜。
+  </p>
+  <p>
+    当然，不是所有体验都需要华丽渲染。文字冒险、桌面模拟、音律互动，这些看似轻量的形态同样能制造深刻共鸣。关键在于“给予玩家有意义的决策权”。哪怕只是选择一句对话的语气，只要结果可感，玩家就会觉得自己在塑造故事，而非仅仅观看。
+  </p>
+
+  <hr>
+
+  <div class="faq-item">
+    <strong>🤔 常见疑问：好游戏一定复杂吗？</strong>
+    <p>并不。许多经典游戏的核心规则用一句话就能说清（比如“躲避障碍，收集道具”）。复杂不等于深度，克制往往比堆砌更见功力。重要的是规则之间能否产生有趣的化学反应，让玩家在重复中持续发现新可能。</p>
+    <p style="margin-top:0.8rem;">如果你希望了解更多关于游戏设计哲学与具体案例的梳理，<a href="https://cn-web-i-game.com.cn">爱游戏</a>的专栏里整理了不少开发笔记和作品分析，从机制拆解到叙事技巧，角度相对务实。</p>
+  </div>
+
+  <div class="ending-note">
+    🎮 好的游戏像一面镜子——它映出你的选择，也映出你如何思考。
+  </div>
+</div>
+
+</body>
+</html>
