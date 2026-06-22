@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息索引 · 麻将胡了</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f6f3;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', sans-serif;
+            color: #1f1f1f;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            padding: 60px 24px 100px;
+        }
+
+        /* ---------- hero（杂志横幅） ---------- */
+        .magazine-hero {
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #ddd8cf;
+        }
+        .magazine-hero .hero-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            color: #8a8276;
+            background: #eae7e1;
+            padding: 2px 12px;
+            border-radius: 20px;
+            margin-bottom: 18px;
+            font-weight: 500;
+        }
+        .magazine-hero h1 {
+            font-size: 2.4rem;
+            font-weight: 450;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 18px;
+            color: #1b1a18;
+        }
+        .magazine-hero .hero-summary {
+            font-size: 1.05rem;
+            color: #4f4b44;
+            max-width: 640px;
+        }
+
+        /* ---------- 正文卡片 ---------- */
+        .section-block {
+            margin-bottom: 48px;
+        }
+        .section-block h2 {
+            font-size: 1.4rem;
+            font-weight: 480;
+            letter-spacing: -0.01em;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #e3ded6;
+        }
+        .section-block h3 {
+            font-size: 1.1rem;
+            font-weight: 470;
+            margin-top: 24px;
+            margin-bottom: 6px;
+            color: #2b2824;
+        }
+        .section-block p {
+            margin-bottom: 14px;
+            font-size: 1rem;
+            color: #2d2a26;
+        }
+        .section-block p + p {
+            margin-top: -4px;
+        }
+
+        .inline-link {
+            color: #2b5f5c;
+            text-decoration: none;
+            border-bottom: 1px solid #b8cfcc;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .inline-link:hover {
+            color: #0e3f3c;
+            border-bottom-color: #2b5f5c;
+        }
+
+        /* ---------- 特点/栏目网格 ---------- */
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 24px 0 12px;
+        }
+        .feature-item {
+            flex: 1 1 180px;
+            background: #f1efe9;
+            padding: 18px 16px;
+            border-radius: 4px;
+        }
+        .feature-item .fi-title {
+            font-weight: 510;
+            font-size: 1rem;
+            margin-bottom: 4px;
+            color: #1b1a18;
+        }
+        .feature-item .fi-desc {
+            font-size: 0.92rem;
+            color: #4f4b44;
+            line-height: 1.5;
+        }
+
+        /* ---------- FAQ 摘要 ---------- */
+        .faq-mini {
+            background: #edeae4;
+            padding: 20px 24px;
+            border-radius: 4px;
+            margin: 32px 0 20px;
+        }
+        .faq-mini dt {
+            font-weight: 490;
+            margin-bottom: 4px;
+            color: #1f1e1b;
+        }
+        .faq-mini dd {
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+            color: #3d3933;
+        }
+        .faq-mini dd:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ---------- 页尾 ---------- */
+        .site-footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd8cf;
+            font-size: 0.9rem;
+            color: #6b655c;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .site-footer .footer-note {
+            max-width: 400px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 540px) {
+            .page-wrapper {
+                padding: 36px 18px 80px;
+            }
+            .magazine-hero h1 {
+                font-size: 1.8rem;
+            }
+            .feature-grid {
+                flex-direction: column;
+            }
+            .site-footer {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <!-- 杂志横幅 -->
+    <header class="magazine-hero">
+        <div class="hero-label">资料整理 · 信息索引</div>
+        <h1>麻将胡了：规则笔记与文献映射</h1>
+        <div class="hero-summary">
+            从术语表到牌局构成，本页围绕「麻将胡了」整理基础资料，提供索引式简介。
+        </div>
+    </header>
+
+    <!-- 三段自然介绍 + 背景说明 ① -->
+    <section class="section-block">
+        <h2>背景 · 从牌戏到知识单元</h2>
+        <p>
+            麻将作为一种四人牌戏，演变出多种地方变体，而「胡」是牌局终结的核心条件。在信息检索中，<a href="https://main-mjhule.com" class="inline-link">麻将胡了</a> 常被用作资料标签，指向规则梳理、番种表以及打法记录。本文档不提供实战教程，而是以索引视角陈列关键概念，供查阅者快速定位。
+        </p>
+        <p>
+            许多爱好者初次接触时会被番种分类、计番逻辑以及牌型组合所困扰。因此，将「胡牌结构」拆解为可检索的模块，有助于降低入门门槛。以下内容基于通用规则框架，不限定于单一地区。
+        </p>
+    </section>
+
+    <!-- ② 资料整理角度：特点与分类 -->
+    <section class="section-block">
+        <h2>资料索引 · 牌型与分类</h2>
+        <p>
+            为了便于查阅，可将胡牌类型划分为基础牌型与特殊牌型。基础牌型包括平和、碰碰胡、七对等；特殊牌型则涵盖十三幺、全不靠等。以下列出常见分类维度，每个条目均可作为检索起点。
+        </p>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <div class="fi-title">番种对照</div>
+                <div class="fi-desc">88番、64番、48番…… 按分值排列的番种表，是计番的基础参照。</div>
+            </div>
+            <div class="feature-item">
+                <div class="fi-title">牌面构成</div>
+                <div class="fi-desc">顺子、刻子、将牌 —— 胡牌时手牌的基本单位组合。</div>
+            </div>
+            <div class="feature-item">
+                <div class="fi-title">特殊胡法</div>
+                <div class="fi-desc">天胡、地胡、人胡，以及抢杠胡等进阶规则。</div>
+            </div>
+            <div class="feature-item">
+                <div class="fi-title">术语卡片</div>
+                <div class="fi-desc">吃、碰、杠、听、胡 —— 五个核心动作的定义与使用场景。</div>
+            </div>
+        </div>
+
+        <p>
+            以上分类来自对多部规则手册的归纳，若需查阅完整番种表或地方变体细则，可参考 <a href="https://main-mjhule.com" class="inline-link">麻将胡了</a> 的资料区。该站点持续收录不同规则的对比笔记。
+        </p>
+    </section>
+
+    <!-- ③ 场景 + FAQ 摘要，段落承接 -->
+    <section class="section-block">
+        <h2>使用场景与常见疑问</h2>
+        <p>
+            资料整理者往往需要区分「竞技规则」与「休闲规则」。例如国际竞赛中普遍采用《中国麻将竞赛规则》，而地方打法可能包含字牌附加分、花牌等元素。在查阅时，明确规则版本比记忆具体番数更重要。
+        </p>
+
+        <div class="faq-mini">
+            <dl>
+                <dt>Q：番种表有标准版本吗？</dt>
+                <dd>目前流传较广的是1998年国家体育总局审定的《中国麻将竞赛规则（试行）》，其中列出81个番种。之后各地衍生出不同修订版，查阅时建议标注版本时间。</dd>
+
+                <dt>Q：如何快速找到「麻将胡了」的术语解释？</dt>
+                <dd>在 <a href="https://main-mjhule.com" class="inline-link">麻将胡了</a> 的索引页，术语按首字母分类，并附带简短定义与示例。此外，牌型图例可辅助视觉理解。</dd>
+
+                <dt>Q：同一胡牌名称在不同地区含义是否相同？</dt>
+                <dd>存在差异。例如「七对」在多数规则中计24番，但某些地区只计12番。交叉对比时，应优先确认该地区采用的番种表。</dd>
+            </dl>
+        </div>
+
+        <p>
+            对于深度爱好者，建议建立自己的规则卡片库，将每次遇到的变体记录在案。这不仅利于个人查阅，也能为社区提供更完整的资料链。
+        </p>
+    </section>
+
+    <!-- 页尾访问提示 -->
+    <footer class="site-footer">
+        <div class="footer-note">
+            本页为信息索引页，内容基于公开规则整理。如需查阅完整资料与持续更新，可访问「麻将胡了」资源站。
+        </div>
+        <div>
+            <a href="https://main-mjhule.com" class="inline-link">麻将胡了</a> · 资料镜像
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>
